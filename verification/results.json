@@ -1,0 +1,772 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "scope": "Finite construction checks and exact structured examples; not a proof or an optimization of the universal bound.",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "seeds": {
+    "full_rank_target": 1126,
+    "rank_deficient_target": 1127,
+    "operator_probes": [
+      1226,
+      1227,
+      1228,
+      1229,
+      1230,
+      1231,
+      1232
+    ]
+  },
+  "tolerances": {
+    "algebra": 1e-10,
+    "zero_eigenvalue": 1e-08,
+    "strict_decay": 1e-09
+  },
+  "structured_examples": [
+    {
+      "name": "product_3_qubits",
+      "dimensions": [
+        2,
+        2,
+        2
+      ],
+      "mu_exact": 0.0,
+      "stationary_infidelity_interval": [
+        0.0,
+        0.0
+      ],
+      "pure_output_optimum": 0.0,
+      "maximum_spectrum_error": 2.220446049250313e-16,
+      "marginals": [
+        {
+          "support_zero_based": [
+            0
+          ],
+          "spectrum": [
+            0.0,
+            0.9999999999999998
+          ]
+        },
+        {
+          "support_zero_based": [
+            1
+          ],
+          "spectrum": [
+            2.220446049250313e-16,
+            0.9999999999999998
+          ]
+        },
+        {
+          "support_zero_based": [
+            2
+          ],
+          "spectrum": [
+            2.7755575615628914e-17,
+            0.9999999999999998
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bell_2_qubits",
+      "dimensions": [
+        2,
+        2
+      ],
+      "mu_exact": 0.5,
+      "stationary_infidelity_interval": [
+        0.25,
+        0.5
+      ],
+      "pure_output_optimum": 0.5,
+      "maximum_spectrum_error": 1.1102230246251565e-16,
+      "marginals": [
+        {
+          "support_zero_based": [
+            0
+          ],
+          "spectrum": [
+            0.4999999999999999,
+            0.4999999999999999
+          ]
+        },
+        {
+          "support_zero_based": [
+            1
+          ],
+          "spectrum": [
+            0.4999999999999999,
+            0.4999999999999999
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ghz_4_single_sites",
+      "dimensions": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "mu_exact": 0.5,
+      "stationary_infidelity_interval": [
+        0.25,
+        0.5
+      ],
+      "pure_output_optimum": 0.5,
+      "maximum_spectrum_error": 1.1102230246251565e-16,
+      "marginals": [
+        {
+          "support_zero_based": [
+            0
+          ],
+          "spectrum": [
+            0.4999999999999999,
+            0.4999999999999999
+          ]
+        },
+        {
+          "support_zero_based": [
+            1
+          ],
+          "spectrum": [
+            0.4999999999999999,
+            0.4999999999999999
+          ]
+        },
+        {
+          "support_zero_based": [
+            2
+          ],
+          "spectrum": [
+            0.4999999999999999,
+            0.4999999999999999
+          ]
+        },
+        {
+          "support_zero_based": [
+            3
+          ],
+          "spectrum": [
+            0.4999999999999999,
+            0.4999999999999999
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ghz_4_pairs",
+      "dimensions": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "mu_exact": 0.0,
+      "stationary_infidelity_interval": [
+        0.0,
+        0.0
+      ],
+      "pure_output_optimum": 0.0,
+      "maximum_spectrum_error": 1.1102230246251565e-16,
+      "marginals": [
+        {
+          "support_zero_based": [
+            0,
+            1
+          ],
+          "spectrum": [
+            0.0,
+            0.0,
+            0.4999999999999999,
+            0.4999999999999999
+          ]
+        },
+        {
+          "support_zero_based": [
+            0,
+            2
+          ],
+          "spectrum": [
+            0.0,
+            0.0,
+            0.4999999999999999,
+            0.4999999999999999
+          ]
+        },
+        {
+          "support_zero_based": [
+            0,
+            3
+          ],
+          "spectrum": [
+            0.0,
+            0.0,
+            0.4999999999999999,
+            0.4999999999999999
+          ]
+        },
+        {
+          "support_zero_based": [
+            1,
+            2
+          ],
+          "spectrum": [
+            0.0,
+            0.0,
+            0.4999999999999999,
+            0.4999999999999999
+          ]
+        },
+        {
+          "support_zero_based": [
+            1,
+            3
+          ],
+          "spectrum": [
+            0.0,
+            0.0,
+            0.4999999999999999,
+            0.4999999999999999
+          ]
+        },
+        {
+          "support_zero_based": [
+            2,
+            3
+          ],
+          "spectrum": [
+            0.0,
+            0.0,
+            0.4999999999999999,
+            0.4999999999999999
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cycle_5_pairs",
+      "dimensions": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "mu_exact": 0.25,
+      "stationary_infidelity_interval": [
+        0.125,
+        0.25
+      ],
+      "pure_output_optimum": 0.25,
+      "maximum_spectrum_error": 1.942890293094024e-16,
+      "marginals": [
+        {
+          "support_zero_based": [
+            0,
+            1
+          ],
+          "spectrum": [
+            0.24999999999999997,
+            0.24999999999999997,
+            0.24999999999999997,
+            0.24999999999999997
+          ]
+        },
+        {
+          "support_zero_based": [
+            0,
+            2
+          ],
+          "spectrum": [
+            0.24999999999999983,
+            0.24999999999999997,
+            0.24999999999999997,
+            0.25
+          ]
+        },
+        {
+          "support_zero_based": [
+            0,
+            3
+          ],
+          "spectrum": [
+            0.24999999999999986,
+            0.24999999999999997,
+            0.24999999999999997,
+            0.24999999999999997
+          ]
+        },
+        {
+          "support_zero_based": [
+            0,
+            4
+          ],
+          "spectrum": [
+            0.24999999999999992,
+            0.24999999999999997,
+            0.24999999999999997,
+            0.24999999999999997
+          ]
+        },
+        {
+          "support_zero_based": [
+            1,
+            2
+          ],
+          "spectrum": [
+            0.2499999999999998,
+            0.24999999999999997,
+            0.24999999999999997,
+            0.24999999999999997
+          ]
+        },
+        {
+          "support_zero_based": [
+            1,
+            3
+          ],
+          "spectrum": [
+            0.2499999999999999,
+            0.24999999999999997,
+            0.24999999999999997,
+            0.25
+          ]
+        },
+        {
+          "support_zero_based": [
+            1,
+            4
+          ],
+          "spectrum": [
+            0.2499999999999999,
+            0.24999999999999997,
+            0.24999999999999997,
+            0.25
+          ]
+        },
+        {
+          "support_zero_based": [
+            2,
+            3
+          ],
+          "spectrum": [
+            0.24999999999999994,
+            0.24999999999999997,
+            0.25,
+            0.25000000000000017
+          ]
+        },
+        {
+          "support_zero_based": [
+            2,
+            4
+          ],
+          "spectrum": [
+            0.24999999999999986,
+            0.24999999999999997,
+            0.24999999999999997,
+            0.24999999999999997
+          ]
+        },
+        {
+          "support_zero_based": [
+            3,
+            4
+          ],
+          "spectrum": [
+            0.24999999999999997,
+            0.24999999999999997,
+            0.24999999999999997,
+            0.24999999999999997
+          ]
+        }
+      ]
+    }
+  ],
+  "cycle_5_exact_checks": {
+    "arithmetic": "int64; all values are small integers",
+    "two_site_gram_matrices_checked": 10,
+    "stabilizer_generators_checked": 5,
+    "stabilizer_weight_distribution": {
+      "0": 1,
+      "1": 0,
+      "2": 0,
+      "3": 10,
+      "4": 15,
+      "5": 6
+    },
+    "minimum_nonidentity_stabilizer_weight": 3,
+    "all_two_site_marginals_equal_identity_over_four": true
+  },
+  "construction_checks": [
+    {
+      "name": "product_3_qubits",
+      "dimensions": [
+        2,
+        2,
+        2
+      ],
+      "allowed_supports_zero_based": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "selected_support_zero_based": [
+        0
+      ],
+      "support_dimension": 2,
+      "complement_dimension": 4,
+      "selected_marginal_rank": 1,
+      "mu_numeric": 0.0,
+      "mu_before_roundoff_clipping": 0.0,
+      "constructed_infidelity": 0.0,
+      "hamiltonian_norm": 1.8477590650225741,
+      "jump_norm": 0.9999999999999998,
+      "generator_dimension": 64,
+      "zero_eigenvalue_count": 1,
+      "zero_eigenvalue_modulus": 5.653794991409031e-16,
+      "spectral_gap_numeric": 0.053863398110521696,
+      "residuals": {
+        "partial_trace_reference": 1.110232641212096e-16,
+        "supported_jump_reference": 0.0,
+        "jump_loss_projector": 4.440892098500626e-16,
+        "basis_orthonormality": 1.9453697725943335e-15,
+        "basis_completeness": 2.0075789616936417e-15,
+        "basis_projector_diagonal": 1.95305227496166e-15,
+        "dark_jump": 0.0,
+        "dark_hamiltonian": 1.38430498614478e-16,
+        "hamiltonian_hermiticity": 5.25549643848642e-16,
+        "stationarity": 3.772225901920777e-16,
+        "trace_preservation": 3.925231146709438e-17,
+        "vectorization_reference": 3.487117814134162e-16,
+        "hermiticity_preservation": 3.9402287705400567e-16
+      }
+    },
+    {
+      "name": "bell_2_qubits",
+      "dimensions": [
+        2,
+        2
+      ],
+      "allowed_supports_zero_based": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "selected_support_zero_based": [
+        0
+      ],
+      "support_dimension": 2,
+      "complement_dimension": 2,
+      "selected_marginal_rank": 2,
+      "mu_numeric": 0.4999999999999999,
+      "mu_before_roundoff_clipping": 0.4999999999999999,
+      "constructed_infidelity": 0.5000000000000001,
+      "hamiltonian_norm": 1.4142135623730951,
+      "jump_norm": 1.0,
+      "generator_dimension": 16,
+      "zero_eigenvalue_count": 1,
+      "zero_eigenvalue_modulus": 0.0,
+      "spectral_gap_numeric": 0.24194412752152705,
+      "residuals": {
+        "partial_trace_reference": 0.0,
+        "supported_jump_reference": 0.0,
+        "jump_loss_projector": 0.0,
+        "basis_orthonormality": 0.0,
+        "basis_completeness": 0.0,
+        "basis_projector_diagonal": 0.0,
+        "dark_jump": 0.0,
+        "dark_hamiltonian": 0.0,
+        "hamiltonian_hermiticity": 0.0,
+        "stationarity": 0.0,
+        "trace_preservation": 0.0,
+        "vectorization_reference": 2.001558195726335e-16,
+        "hermiticity_preservation": 1.7557595556438868e-16
+      }
+    },
+    {
+      "name": "ghz_4_single_sites",
+      "dimensions": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "allowed_supports_zero_based": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "selected_support_zero_based": [
+        0
+      ],
+      "support_dimension": 2,
+      "complement_dimension": 8,
+      "selected_marginal_rank": 2,
+      "mu_numeric": 0.4999999999999999,
+      "mu_before_roundoff_clipping": 0.4999999999999999,
+      "constructed_infidelity": 0.5000000000000001,
+      "hamiltonian_norm": 1.961570560806461,
+      "jump_norm": 1.0,
+      "generator_dimension": 256,
+      "zero_eigenvalue_count": 1,
+      "zero_eigenvalue_modulus": 0.0,
+      "spectral_gap_numeric": 0.00405035427461145,
+      "residuals": {
+        "partial_trace_reference": 0.0,
+        "supported_jump_reference": 0.0,
+        "jump_loss_projector": 0.0,
+        "basis_orthonormality": 0.0,
+        "basis_completeness": 0.0,
+        "basis_projector_diagonal": 0.0,
+        "dark_jump": 0.0,
+        "dark_hamiltonian": 0.0,
+        "hamiltonian_hermiticity": 0.0,
+        "stationarity": 0.0,
+        "trace_preservation": 0.0,
+        "vectorization_reference": 1.61074936452439e-16,
+        "hermiticity_preservation": 1.5659182685328455e-16
+      }
+    },
+    {
+      "name": "ghz_4_pairs",
+      "dimensions": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "allowed_supports_zero_based": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "selected_support_zero_based": [
+        0,
+        1
+      ],
+      "support_dimension": 4,
+      "complement_dimension": 4,
+      "selected_marginal_rank": 2,
+      "mu_numeric": 0.0,
+      "mu_before_roundoff_clipping": 0.0,
+      "constructed_infidelity": 0.0,
+      "hamiltonian_norm": 1.961570560806461,
+      "jump_norm": 1.0,
+      "generator_dimension": 256,
+      "zero_eigenvalue_count": 1,
+      "zero_eigenvalue_modulus": 8.03504719211834e-16,
+      "spectral_gap_numeric": 0.006240451921618712,
+      "residuals": {
+        "partial_trace_reference": 0.0,
+        "supported_jump_reference": 0.0,
+        "jump_loss_projector": 0.0,
+        "basis_orthonormality": 0.0,
+        "basis_completeness": 2.7194799110210365e-16,
+        "basis_projector_diagonal": 0.0,
+        "dark_jump": 0.0,
+        "dark_hamiltonian": 1.5700924586837752e-16,
+        "hamiltonian_hermiticity": 0.0,
+        "stationarity": 1.922962686383564e-16,
+        "trace_preservation": 0.0,
+        "vectorization_reference": 1.6621466418146744e-16,
+        "hermiticity_preservation": 1.741000492032187e-16
+      }
+    },
+    {
+      "name": "complex_full_rank_separated_support",
+      "dimensions": [
+        2,
+        4,
+        2
+      ],
+      "allowed_supports_zero_based": [
+        [
+          0
+        ],
+        [
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "selected_support_zero_based": [
+        0,
+        2
+      ],
+      "support_dimension": 4,
+      "complement_dimension": 4,
+      "selected_marginal_rank": 4,
+      "mu_numeric": 0.0018864456399074782,
+      "mu_before_roundoff_clipping": 0.0018864456399074782,
+      "constructed_infidelity": 0.0018864456399073637,
+      "hamiltonian_norm": 1.9615705608064615,
+      "jump_norm": 1.0,
+      "generator_dimension": 256,
+      "zero_eigenvalue_count": 1,
+      "zero_eigenvalue_modulus": 2.9111693809230635e-15,
+      "spectral_gap_numeric": 0.0026412495045163944,
+      "residuals": {
+        "partial_trace_reference": 8.430827480742411e-17,
+        "supported_jump_reference": 0.0,
+        "jump_loss_projector": 4.0194153917622574e-16,
+        "basis_orthonormality": 1.821712955114306e-15,
+        "basis_completeness": 1.9181505656318907e-15,
+        "basis_projector_diagonal": 1.7116920898689018e-15,
+        "dark_jump": 4.714372364362743e-17,
+        "dark_hamiltonian": 2.6788983659842224e-16,
+        "hamiltonian_hermiticity": 7.583122987338113e-16,
+        "stationarity": 4.523929186549035e-16,
+        "trace_preservation": 3.9953430009595677e-16,
+        "vectorization_reference": 4.505347828048303e-16,
+        "hermiticity_preservation": 5.423036640940697e-16
+      }
+    },
+    {
+      "name": "complex_rank_deficient_larger_support",
+      "dimensions": [
+        2,
+        3,
+        2
+      ],
+      "allowed_supports_zero_based": [
+        [
+          0
+        ],
+        [
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "selected_support_zero_based": [
+        0,
+        2
+      ],
+      "support_dimension": 4,
+      "complement_dimension": 3,
+      "selected_marginal_rank": 3,
+      "mu_numeric": 0.0,
+      "mu_before_roundoff_clipping": -8.73319276341196e-17,
+      "constructed_infidelity": 0.0,
+      "hamiltonian_norm": 1.9318516525781362,
+      "jump_norm": 1.0000000000000007,
+      "generator_dimension": 144,
+      "zero_eigenvalue_count": 1,
+      "zero_eigenvalue_modulus": 7.10374353799676e-16,
+      "spectral_gap_numeric": 0.02345744702181492,
+      "residuals": {
+        "partial_trace_reference": 8.283191067987946e-17,
+        "supported_jump_reference": 0.0,
+        "jump_loss_projector": 9.513891552943224e-16,
+        "basis_orthonormality": 2.1058198384986727e-15,
+        "basis_completeness": 2.064045958051628e-15,
+        "basis_projector_diagonal": 2.1727266283301396e-15,
+        "dark_jump": 6.648767611728002e-17,
+        "dark_hamiltonian": 2.1460850183694466e-16,
+        "hamiltonian_hermiticity": 7.674264515004291e-16,
+        "stationarity": 4.2351801319143677e-16,
+        "trace_preservation": 3.6574843860050767e-16,
+        "vectorization_reference": 4.544968273976645e-16,
+        "hermiticity_preservation": 5.061671199832283e-16
+      }
+    },
+    {
+      "name": "single_qubit_full_support",
+      "dimensions": [
+        2
+      ],
+      "allowed_supports_zero_based": [
+        [
+          0
+        ]
+      ],
+      "selected_support_zero_based": [
+        0
+      ],
+      "support_dimension": 2,
+      "complement_dimension": 1,
+      "selected_marginal_rank": 1,
+      "mu_numeric": 0.0,
+      "mu_before_roundoff_clipping": 0.0,
+      "constructed_infidelity": 0.0,
+      "hamiltonian_norm": 0.0,
+      "jump_norm": 0.9999999999999999,
+      "generator_dimension": 4,
+      "zero_eigenvalue_count": 1,
+      "zero_eigenvalue_modulus": 3.97792956337433e-16,
+      "spectral_gap_numeric": 0.4999999999999997,
+      "residuals": {
+        "partial_trace_reference": 0.0,
+        "supported_jump_reference": 0.0,
+        "jump_loss_projector": 2.220446049250313e-16,
+        "basis_orthonormality": 2.220446049250313e-16,
+        "basis_completeness": 3.1401849173675503e-16,
+        "basis_projector_diagonal": 0.0,
+        "dark_jump": 0.0,
+        "dark_hamiltonian": 0.0,
+        "hamiltonian_hermiticity": 0.0,
+        "stationarity": 3.925231146709438e-17,
+        "trace_preservation": 0.0,
+        "vectorization_reference": 1.0764374529430602e-16,
+        "hermiticity_preservation": 0.0
+      }
+    }
+  ],
+  "summary": {
+    "structured_example_count": 5,
+    "construction_count": 7,
+    "maximum_generator_dimension": 256,
+    "maximum_algebra_residual": 2.1727266283301396e-15,
+    "smallest_observed_spectral_gap": 0.0026412495045163944,
+    "all_zero_modes_unique_and_other_modes_decaying": true
+  }
+}

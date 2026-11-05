@@ -1,0 +1,55 @@
+# Dissipative Locality and Accuracy
+
+This repository characterizes stationary approximation of pure quantum targets
+when each Lindblad jump is confined to an allowed support and global coherent
+control is unrestricted. The scientific account is organized by topic.
+
+Canonical entrypoints:
+- README.md: question, central error law, scientific routes, reproduction and scope.
+- science/model.md: complete finite-dimensional model, existential localized
+  representation condition, fidelity convention and optimization quantifiers.
+- science/converse.md: leading stationary eigenvector, spectral population
+  balance, local minimum eigenvalue bound, binary overlap argument, and the
+  exact distance to pure states with a rank-deficient allowed marginal.
+- science/construction.md: least-component truncation, one supported reset,
+  projector-eigenbasis Jacobi Hamiltonian, uniqueness and global attraction.
+- science/examples.md: structured targets and the positive/zero-marginal boundary.
+- science/consequences.md: uniform marginals, finite-accuracy support requirements,
+  Haar marginal concentration and its uniform support-family probability bound.
+- science/resources.md: what is optimized, global Hamiltonian implementation,
+  convergence limits, actual jump support and changes of physical model.
+- references/RELATED_WORK.md: exact primary comparisons, inherited ingredients,
+  source versions and limits of the literature comparison.
+- references/references.bib: structured primary-source bibliography.
+- verification/README.md: actual reproducible checks and their scientific limits.
+- verification/verify.py: finite construction and structured-state checks.
+- verification/results.json: recorded numerical and exact-check output.
+
+Reader routes:
+- Scientific story: model, converse, construction, examples, consequences, resources.
+- Proof inspection: begin with the exact model and then read the relevant full proof.
+- Numerical reproduction: follow verification/README.md; separate finite checks
+  from universal statements established analytically.
+- Attribution: read RELATED_WORK.md before assigning originality to a mechanism.
+
+Preserve these distinctions:
+- mu includes zero eigenvalues of the full reduced-state matrix; it is not the
+  smallest nonzero Schmidt weight.
+- epsilon is 1-<psi|rho|psi>, not trace distance or one minus root fidelity.
+- The mixed optimum is bounded between mu/2 and mu; the pure optimum equals mu.
+- The all-stationary converse needs a nonscalar jump. Global attraction already
+  excludes scalar-only or purely Hamiltonian dynamics on a nontrivial system.
+- A generator is admissible if it has at least one representation with every
+  jump supported on an allowed region. General channel mixing changes displayed
+  supports without necessarily changing admissibility.
+- The target need not be an eigenvector of the stationary density matrix.
+- The Hamiltonian is arbitrary and global. The converse survives stronger
+  restrictions, while the matching upper construction uses global freedom.
+- The Jacobi basis must diagonalize the projector J-dagger J.
+- The construction includes mu=0 and supports larger than their complements.
+- A bounded Hamiltonian norm does not imply efficient specification, simulation
+  or preparation. No general mixing-time law or optimal lower coefficient is proved.
+- Local microscopic bath couplings need not yield locally supported effective jumps.
+- Exact-state rank obstructions, spectral population balance, Hamiltonian-assisted
+  attraction and random marginal concentration are inherited tools.
+- Numerical checks and internal proof reviews do not constitute external peer review.
