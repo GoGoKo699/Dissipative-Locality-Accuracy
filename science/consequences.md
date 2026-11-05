@@ -38,7 +38,7 @@ When $`\mu_{\mathcal N}(\psi)=0`$, the target itself can be stabilized exactly. 
 
 ## A deterministic support requirement
 
-Consider $`n`$ physical qubits and supports satisfying $`1\le |S|\le k`$. Suppose that, for some $`0<c\le1`$,
+Consider $`n`$ physical qubits and supports satisfying $`1\le |S|\le k`$. Suppose that, for some $`0\lt c\le1`$,
 
 ```math
 \psi_S\succeq \frac{c}{2^{|S|}}I_S
@@ -100,12 +100,14 @@ r=2^{n-k}.
 For any fixed $`k`$-subset $`T`$, the marginal $`\psi_T`$ is full rank almost surely because $`d\le r`$. [Hayden, Leung and Winter, Lemma III.4](../references/RELATED_WORK.md#hayden2006) gives, for $`0<\eta<1`$,
 
 ```math
-\Pr\!\left[
+\begin{aligned}
+&\Pr\!\left[
 \lambda_{\min}(\psi_T)<\frac{1-\eta}{d}
 \right]
 \le
 \left(\frac{10d}{\eta}\right)^{2d}
 \exp\!\left(-\frac{r\eta^2}{14}\right).
+\end{aligned}
 \tag{1}
 ```
 
@@ -114,7 +116,8 @@ In this page $`\exp`$ denotes the natural exponential and $`\ln`$ the natural lo
 A union bound over all $`\binom nk`$ supports gives the failure probability
 
 ```math
-\Delta_{n,k}(\eta)
+\begin{aligned}
+&\Delta_{n,k}(\eta)
 :=
 \min\!\left\{
 1,\,
@@ -122,16 +125,19 @@ A union bound over all $`\binom nk`$ supports gives the failure probability
 \left(\frac{10\,2^k}{\eta}\right)^{2^{k+1}}
 \exp\!\left(-\frac{2^{n-k}\eta^2}{14}\right)
 \right\}.
+\end{aligned}
 \tag{2}
 ```
 
 No independence of the marginals is required. With probability at least $`1-\Delta_{n,k}(\eta)`$, every $`k`$-subset satisfies $`\psi_T\succeq(1-\eta)I_T/2^k`$. For a smaller subset $`S\subset T`$, positivity of the partial trace then gives
 
 ```math
-\psi_S
+\begin{aligned}
+&\psi_S
 =\mathrm{Tr}_{T\setminus S}\psi_T
 \succeq
 \frac{1-\eta}{2^{|S|}}I_S.
+\end{aligned}
 \tag{3}
 ```
 
@@ -166,9 +172,11 @@ Fix $`0<\alpha<1/2`$ and let $`k=k_n`$ satisfy
 Choose $`\eta_n=2^{-\alpha n/2}`$. The logarithm of the untruncated expression in (2) is
 
 ```math
-\ln\binom nk
+\begin{aligned}
+&\ln\binom nk
 +2^{k+1}\ln\!\left(\frac{10\,2^k}{\eta_n}\right)
 -\frac{2^{n-k}\eta_n^2}{14}.
+\end{aligned}
 \tag{5}
 ```
 

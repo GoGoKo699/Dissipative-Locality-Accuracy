@@ -4,13 +4,15 @@ Run from the repository root with Python 3.12 and the pinned dependencies:
 
 ```bash
 python -m pip install -r verification/requirements.txt
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python verification/verify.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  python verification/verify.py
 ```
 
 The script exits unsuccessfully if any check fails and writes [results.json](results.json) only after all checks pass. To run the same checks without changing the saved output:
 
 ```bash
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python verification/verify.py --no-write
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  python verification/verify.py --no-write
 ```
 
 An alternative output location can be supplied with `--output PATH`. The saved results record the Python, NumPy, and SciPy versions, target and probe seeds, tolerances, every checked marginal spectrum, and each generator's residuals and spectral gap. Floating-point values may differ slightly across numerical-library builds; the checks use explicit tolerances rather than requiring identical decimal output.

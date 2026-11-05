@@ -55,9 +55,11 @@ Moreover, $`R|\phi\rangle=0`$ gives
 Thus stationarity implies the exact identity and its positive-operator estimate
 
 ```math
-(1-\delta)\sum_a\|L_a\phi\|^2
+\begin{aligned}
+&(1-\delta)\sum_a\|L_a\phi\|^2
 =\sum_a\langle\phi|L_aRL_a^\dagger|\phi\rangle
 \le\delta\sum_a\|L_a^\dagger\phi\|^2.
+\end{aligned}
 \tag{1}
 ```
 
@@ -159,7 +161,9 @@ R\le\delta\bigl(I-|\phi\rangle\langle\phi|\bigr),
 and hence
 
 ```math
-F\le(1-\delta)c^2+\delta(1-c^2).
+\begin{aligned}
+&F\le(1-\delta)c^2+\delta(1-c^2).
+\end{aligned}
 \tag{5}
 ```
 
@@ -168,7 +172,7 @@ If $`\delta\ge\mu`$, then $`F\le1-\delta`$ already gives the stronger inequality
 ```math
 \mu=\sin^2 a,
 \qquad \delta=\sin^2 b,
-\qquad 0\le b<a\le\frac\pi4.
+\qquad 0\le b\lt a\le\frac\pi4.
 ```
 
 Equation (4) says $`c\le\cos(a-b)`$. Since $`1-2\delta>0`$, (5) implies

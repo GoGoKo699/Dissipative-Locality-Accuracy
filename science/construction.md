@@ -15,20 +15,24 @@ Write $`\mu=\mu_{\mathcal N}(\psi)`$. Choose an allowed support $`S`$ attaining 
 Let
 
 ```math
-A=|u\rangle\langle u|_S\otimes I_{S^c},
+\begin{aligned}
+&A=|u\rangle\langle u|_S\otimes I_{S^c},
 \qquad
 |\phi\rangle=\frac{(I-A)|\psi\rangle}{\sqrt{1-\mu}}.
+\end{aligned}
 \tag{1}
 ```
 
 Since $`\mu\le1/2`$, the normalization is well defined. Directly,
 
 ```math
-A\phi=0,
+\begin{aligned}
+&A\phi=0,
 \qquad
 \langle\psi|\phi\rangle=\sqrt{1-\mu},
 \qquad
 1-|\langle\psi|\phi\rangle|^2=\mu.
+\end{aligned}
 \tag{2}
 ```
 
@@ -39,7 +43,9 @@ Choose a unit eigenvector $`|b\rangle`$ of $`\psi_S`$, orthogonal to $`u`$, with
 Use the single local reset jump
 
 ```math
-J=|b\rangle\langle u|_S\otimes I_{S^c}.
+\begin{aligned}
+&J=|b\rangle\langle u|_S\otimes I_{S^c}.
+\end{aligned}
 \tag{3}
 ```
 
@@ -60,9 +66,11 @@ v=J^\dagger\phi.
 The retained component along $`b`$ ensures
 
 ```math
-Av=v,
+\begin{aligned}
+&Av=v,
 \qquad
 \|v\|^2=\frac{\nu}{1-\mu}>0.
+\end{aligned}
 \tag{4}
 ```
 
@@ -87,8 +95,10 @@ e_1=\frac{v}{\|v\|},\quad e_2,\ldots,e_{D-1}
 of $`Q\mathcal H`$ consisting entirely of eigenvectors of $`A`$:
 
 ```math
-Ae_j=a_je_j,
+\begin{aligned}
+&Ae_j=a_je_j,
 \qquad a_j\in\{0,1\}.
+\end{aligned}
 \tag{5}
 ```
 
@@ -97,10 +107,12 @@ Such a completion exists because $`Av=v`$. The eigenbasis requirement in (5) is 
 For any fixed $`h>0`$, define
 
 ```math
-H=h\sum_{j=1}^{D-2}
+\begin{aligned}
+&H=h\sum_{j=1}^{D-2}
 \left(|e_j\rangle\langle e_{j+1}|
 +|e_{j+1}\rangle\langle e_j|\right),
 \qquad H\phi=0.
+\end{aligned}
 \tag{6}
 ```
 
@@ -113,7 +125,9 @@ This is a path Hamiltonian on the orthogonal complement of $`\phi`$. Its norm is
 For $`D=2`$, the sum is empty and $`H=0`$, consistent with this formula. The generator is
 
 ```math
-\mathcal L(\rho)=-i[H,\rho]+\mathcal D[J](\rho).
+\begin{aligned}
+&\mathcal L(\rho)=-i[H,\rho]+\mathcal D[J](\rho).
+\end{aligned}
 \tag{7}
 ```
 
@@ -132,7 +146,9 @@ Let $`\rho`$ be any stationary density operator. Its population balance at $`\ph
 For a positive semidefinite operator, a vanishing quadratic form at a vector implies that the operator annihilates that vector. Therefore
 
 ```math
-\rho e_1=0.
+\begin{aligned}
+&\rho e_1=0.
+\end{aligned}
 \tag{8}
 ```
 
@@ -149,7 +165,7 @@ Indeed, the commutator and anticommutator diagonal entries vanish whenever $`\rh
 =-i\langle e_j|H\rho.
 ```
 
-Here $`\langle e_j|\rho H=0`$; both anticommutator rows vanish because $`A`$ is diagonal in the chosen basis. From the path form of $`H`$ and the already vanishing preceding row, for $`j<D-1`$ we obtain
+Here $`\langle e_j|\rho H=0`$; both anticommutator rows vanish because $`A`$ is diagonal in the chosen basis. From the path form of $`H`$ and the already vanishing preceding row, for $`j\lt D-1`$ we obtain
 
 ```math
 0=-ih\langle e_{j+1}|\rho.
@@ -168,9 +184,11 @@ This proves uniqueness. The case $`D=2`$ is already complete after (8).
 For an arbitrary initial density operator, let $`\rho(t)=e^{t\mathcal L}(\rho_0)`$. Its desired-state population obeys
 
 ```math
-p(t)=\mathrm{Tr}(P\rho(t)),
+\begin{aligned}
+&p(t)=\mathrm{Tr}(P\rho(t)),
 \qquad
 \frac{dp}{dt}=\langle v|\rho(t)|v\rangle\ge0.
+\end{aligned}
 \tag{9}
 ```
 
