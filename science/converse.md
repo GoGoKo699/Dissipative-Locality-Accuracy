@@ -28,7 +28,7 @@ Let $`\rho_*`$ be stationary and suppose its largest eigenvalue exceeds one half
 ```math
 R\ge0,
 \qquad R|\phi\rangle=0,
-\qquad \operatorname{Tr}R=\delta.
+\qquad \mathrm{Tr}R=\delta.
 ```
 
 The leading eigenvector is unique up to phase. For each jump define
@@ -55,9 +55,11 @@ Moreover, $`R|\phi\rangle=0`$ gives
 Thus stationarity implies the exact identity and its positive-operator estimate
 
 ```math
-(1-\delta)\sum_a\|L_a\phi\|^2
+\begin{aligned}
+&(1-\delta)\sum_a\|L_a\phi\|^2
 =\sum_a\langle\phi|L_aRL_a^\dagger|\phi\rangle
 \le\delta\sum_a\|L_a^\dagger\phi\|^2.
+\end{aligned}
 \tag{1}
 ```
 
@@ -72,10 +74,10 @@ For each allowed support, define the extremal eigenvalues of the marginal of the
 \qquad
 \beta_S=\lambda_{\max}(\phi_S),
 \qquad
-\phi_S=\operatorname{Tr}_{S^c}|\phi\rangle\langle\phi|.
+\phi_S=\mathrm{Tr}_{S^c}|\phi\rangle\langle\phi|.
 ```
 
-Because $`\dim\mathcal H_S\ge2`$ and $`\operatorname{Tr}\phi_S=1`$,
+Because $`\dim\mathcal H_S\ge2`$ and $`\mathrm{Tr}\phi_S=1`$,
 
 ```math
 \beta_S\le1-\alpha_S.
@@ -86,10 +88,10 @@ Write $`L_a=L_{a,S_a}\otimes I_{S_a^c}`$. With $`\|\cdot\|_F`$ denoting the Frob
 ```math
 \begin{aligned}
 \|L_a\phi\|^2
-&=\operatorname{Tr}(\phi_{S_a}L_{a,S_a}^\dagger L_{a,S_a})
+&=\mathrm{Tr}(\phi_{S_a}L_{a,S_a}^\dagger L_{a,S_a})
 \ge\alpha_{S_a}\|L_{a,S_a}\|_F^2,\\
 \|L_a^\dagger\phi\|^2
-&=\operatorname{Tr}(\phi_{S_a}L_{a,S_a}L_{a,S_a}^\dagger)
+&=\mathrm{Tr}(\phi_{S_a}L_{a,S_a}L_{a,S_a}^\dagger)
 \le\beta_{S_a}\|L_{a,S_a}\|_F^2.
 \end{aligned}
 \tag{2}
@@ -159,7 +161,9 @@ R\le\delta\bigl(I-|\phi\rangle\langle\phi|\bigr),
 and hence
 
 ```math
-F\le(1-\delta)c^2+\delta(1-c^2).
+\begin{aligned}
+&F\le(1-\delta)c^2+\delta(1-c^2).
+\end{aligned}
 \tag{5}
 ```
 
@@ -168,7 +172,7 @@ If $`\delta\ge\mu`$, then $`F\le1-\delta`$ already gives the stronger inequality
 ```math
 \mu=\sin^2 a,
 \qquad \delta=\sin^2 b,
-\qquad 0\le b<a\le\frac\pi4.
+\qquad 0\le b\lt a\le\frac\pi4.
 ```
 
 Equation (4) says $`c\le\cos(a-b)`$. Since $`1-2\delta>0`$, (5) implies
@@ -221,7 +225,7 @@ Every term vanishes, so every jump has $`\phi`$ as an eigenvector. Choose a nons
 
 ```math
 0=\|L_a\phi\|^2
-=\operatorname{Tr}(\phi_{S_a}L_{a,S_a}^\dagger L_{a,S_a})
+=\mathrm{Tr}(\phi_{S_a}L_{a,S_a}^\dagger L_{a,S_a})
 ```
 
 forces $`\phi_{S_a}`$ to be rank deficient. A positive definite marginal would give a strictly positive trace. This is the local rank obstruction familiar from [quasi-local pure-state stabilization](../references/RELATED_WORK.md#karuvade2018); the common-eigenvector and invariant-subspace conditions also belong to [Hamiltonian-assisted stabilization theory](../references/RELATED_WORK.md#ticozzi2009).

@@ -8,7 +8,7 @@ Fix a pure target $`|\psi\rangle`$ and a nonempty family $`\mathcal N`$ of allow
 \mu_{\mathcal N}(\psi)
 =\min_{S\in\mathcal N}\lambda_{\min}(\psi_S),
 \qquad
-\psi_S=\operatorname{Tr}_{S^c}|\psi\rangle\langle\psi|.
+\psi_S=\mathrm{Tr}_{S^c}|\psi\rangle\langle\psi|.
 ```
 
 The eigenvalue minimum includes zeros. For ordinary target infidelity $`\epsilon=1-\langle\psi|\rho_*|\psi\rangle`$, optimize over generators with a unique globally attractive stationary state. Then
@@ -49,6 +49,12 @@ Begin with the [model, conventions and exact theorem](science/model.md), then fo
 | Reproducible checks and the scope of numerical evidence | [Verification](verification/README.md) |
 
 The [LLM reading guide](llms.txt) maps questions to these authoritative files.
+
+## Learning route
+
+The educational anchor is **Ángel Rivas and Susana F. Huelga, _Open Quantum Systems: An Introduction_ (2012)**, using the fixed [author preprint, arXiv:1104.5242v2](https://arxiv.org/pdf/1104.5242v2). The [source-to-project bridge](learning/ANCHOR.md) selects the relevant sections, translates conventions and develops the steps from open-system dynamics to the locality–accuracy law.
+
+The [30-milestone map](learning/MILESTONES.md) connects the background to the complete argument, its examples and its physical limits. Readers can follow that route or go directly to the scientific statement and proofs above.
 
 ## Reproduce the finite checks
 
