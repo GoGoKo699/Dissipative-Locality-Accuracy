@@ -45,7 +45,7 @@ Fix a normalized pure target $`|\psi\rangle`$, and write
 ```math
 \psi=|\psi\rangle\langle\psi|,
 \qquad
-\psi_S=\operatorname{Tr}_{S^c}\psi.
+\psi_S=\mathrm{Tr}_{S^c}\psi.
 ```
 
 Define
@@ -100,7 +100,7 @@ Restricting the same optimization to pure stationary outputs defines
 ```math
 \epsilon_{\mathrm{pure,opt}}(\psi,\mathcal N)
 =\inf_{\substack{\mathcal L\in\mathfrak G_{\mathcal N}^{\mathrm{att}}\\
-\operatorname{rank}\rho_{\mathcal L}=1}}
+\mathrm{rank}\rho_{\mathcal L}=1}}
 \left[1-\langle\psi|\rho_{\mathcal L}|\psi\rangle\right].
 ```
 

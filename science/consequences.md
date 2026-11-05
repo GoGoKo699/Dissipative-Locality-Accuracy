@@ -8,7 +8,7 @@ The stationary accuracy law turns local marginal spectra into a constraint on di
 \mu_{\mathcal N}(\psi)
 =\min_{S\in\mathcal N}\lambda_{\min}(\psi_S),
 \qquad
-\psi_S=\operatorname{Tr}_{S^c}|\psi\rangle\langle\psi|.
+\psi_S=\mathrm{Tr}_{S^c}|\psi\rangle\langle\psi|.
 ```
 
 The minimum includes zero eigenvalues. The [main theorem](model.md) gives
@@ -129,7 +129,7 @@ No independence of the marginals is required. With probability at least $`1-\Del
 
 ```math
 \psi_S
-=\operatorname{Tr}_{T\setminus S}\psi_T
+=\mathrm{Tr}_{T\setminus S}\psi_T
 \succeq
 \frac{1-\eta}{2^{|S|}}I_S.
 \tag{3}

@@ -168,7 +168,7 @@ This proves uniqueness. The case $`D=2`$ is already complete after (8).
 For an arbitrary initial density operator, let $`\rho(t)=e^{t\mathcal L}(\rho_0)`$. Its desired-state population obeys
 
 ```math
-p(t)=\operatorname{Tr}(P\rho(t)),
+p(t)=\mathrm{Tr}(P\rho(t)),
 \qquad
 \frac{dp}{dt}=\langle v|\rho(t)|v\rangle\ge0.
 \tag{9}
@@ -191,7 +191,7 @@ The finite-dimensional state space is compact, so a sequence with $`T\to\infty`$
 The uniqueness result therefore forces every such limit to equal $`P`$. On the other hand,
 
 ```math
-\operatorname{Tr}(P\overline\rho_T)
+\mathrm{Tr}(P\overline\rho_T)
 =\frac1T\int_0^T p(t)\,dt
 \longrightarrow p_\infty.
 ```

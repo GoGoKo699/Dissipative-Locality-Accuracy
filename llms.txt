@@ -21,12 +21,18 @@ Canonical entrypoints:
 - references/RELATED_WORK.md: exact primary comparisons, inherited ingredients,
   source versions and limits of the literature comparison.
 - references/references.bib: structured primary-source bibliography.
+- learning/ANCHOR.md: the single educational anchor, Rivas–Huelga (2012), fixed
+  arXiv:1104.5242v2; focused source routes, notation and the bridge to this result.
+- learning/MILESTONES.md: exactly 30 project-defined understanding targets,
+  connecting background/preliminaries to the narrative and scientific contribution.
 - verification/README.md: actual reproducible checks and their scientific limits.
 - verification/verify.py: finite construction and structured-state checks.
 - verification/results.json: recorded numerical and exact-check output.
 
 Reader routes:
 - Scientific story: model, converse, construction, examples, consequences, resources.
+- Study: learning/ANCHOR.md, then the two phases in learning/MILESTONES.md;
+  follow their pointers to the authoritative science without requiring a full-book read.
 - Proof inspection: begin with the exact model and then read the relevant full proof.
 - Numerical reproduction: follow verification/README.md; separate finite checks
   from universal statements established analytically.
