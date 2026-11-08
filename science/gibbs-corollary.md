@@ -2,7 +2,7 @@
 
 [Model and theorem](model.md) · [Stationary converse](converse.md) · [Consequences](consequences.md) · [Coherent-control resources](resources.md#local-and-global-coherent-control-for-gibbs-targets)
 
-A low-temperature Gibbs state approaches a ground-state projector. The pure-target stationary bound therefore gives a finite-temperature approximation floor whenever every allowed ground-state marginal is full rank. This page derives that corollary and applies it to the rigorously certified five-qubit witness in [Gibbs Cancellation Obstruction](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction). The complete explicit certificate, stronger exact-target proof and positive thermal construction have their [authoritative home there](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/5666fe5ede05e8d5ea4d8caf1f9641c2170341f8/science/finite-temperature-feasibility.md).
+A low-temperature Gibbs state approaches a ground-state projector. The pure-target stationary bound therefore gives a finite-temperature approximation floor whenever every allowed ground-state marginal is full rank. This page derives that corollary and applies it to the rigorously certified five-qubit witness in [Gibbs Cancellation Obstruction](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction). The complete explicit certificate, stronger exact-target proof and positive thermal construction have their [authoritative home there](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/a7936ff432dcb745ef025f058ea5686614d89326/science/finite-temperature-feasibility.md).
 
 ## Model and accuracy conventions
 
@@ -56,20 +56,20 @@ D_{\mathrm{tr}}(\sigma,\rho_\beta)
 }
 ```
 
-No square root or additional factor of two appears: the comparison uses one projector's probability difference directly. In particular, $`\delta_\beta<\mu/2`$ excludes exact Gibbs stationarity with genuine dissipation, even under unrestricted coherent control. This is a corollary of this repository's existing pure-target theorem, rather than a second discovery of that theorem. Local-cooling temperature floors are also an [established physical phenomenon](../references/RELATED_WORK.md#znidaric2015).
+No square root or additional factor of two appears: the comparison uses one projector's probability difference directly. In particular, $`\delta_\beta\lt \mu/2`$ excludes exact Gibbs stationarity with genuine dissipation, even under unrestricted coherent control. This is a corollary of this repository's existing pure-target theorem, rather than a second discovery of that theorem. Local-cooling temperature floors are also an [established physical phenomenon](../references/RELATED_WORK.md#znidaric2015).
 
 ## Certified five-qubit example
 
-Take the original five-qubit open chain and let $`\mathcal N`$ contain its five single sites and four adjacent pairs. The integer Pauli Hamiltonian $`H_0`$ is fixed by the [authoritative coefficient file](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/5666fe5ede05e8d5ea4d8caf1f9641c2170341f8/verification/data/hamiltonian.json). The [256-bit Arb/Acb certificate](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/5666fe5ede05e8d5ea4d8caf1f9641c2170341f8/verification/ground-thermal/ground_thermal_certificate.json) isolates all 32 energies, certifies the normalized ground vector, and encloses the complete spectra of all nine allowed marginals. Every one of those marginals is positive definite. It proves
+Take the original five-qubit open chain and let $`\mathcal N`$ contain its five single sites and four adjacent pairs. The integer Pauli Hamiltonian $`H_0`$ is fixed by the [authoritative coefficient file](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/a7936ff432dcb745ef025f058ea5686614d89326/verification/data/hamiltonian.json). The [256-bit Arb/Acb certificate](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/a7936ff432dcb745ef025f058ea5686614d89326/verification/ground-thermal/ground_thermal_certificate.json) isolates all 32 energies, certifies the normalized ground vector, and encloses the complete spectra of all nine allowed marginals. Every one of those marginals is positive definite. It proves
 
 ```math
-0.000071696775227<\mu<0.000071696775228,
+0.000071696775227\lt \mu\lt 0.000071696775228,
 ```
 
 with the minimum uniquely attained on bond $`(1,2)`$, and
 
 ```math
-3.005072939810<E_1-E_0<3.005072939811.
+3.005072939810\lt E_1-E_0\lt 3.005072939811.
 ```
 
 The exact thermal deficit is evaluated from those certified energies:
@@ -83,7 +83,7 @@ The exact thermal deficit is evaluated from those certified energies:
 At $`\beta=4`$ the certificate gives
 
 ```math
-0.000006066710605253<\delta_4<0.000006066710605254,
+0.000006066710605253\lt \delta_4\lt 0.000006066710605254,
 ```
 
 and, for every stationary output $`\sigma`$ with a nonscalar allowed jump,
@@ -92,7 +92,7 @@ and, for every stationary output $`\sigma`$ with a nonscalar allowed jump,
 \boxed{D_{\mathrm{tr}}(\sigma,\rho_4)>0.000029781677008303.}
 ```
 
-The [certificate guide and command](../verification/README.md#the-external-rigorous-gibbs-certificate) distinguish these outward interval bounds from this repository's finite floating-point generator checks. The sufficient test $`\delta_\beta<\mu/2`$ has its crossing between $`3.41147195216`$ and $`3.41147195217`$ for this fixed Hamiltonian. That crossing is not the exact physical feasibility boundary.
+The [certificate guide and command](../verification/README.md#the-external-rigorous-gibbs-certificate) distinguish these outward interval bounds from this repository's finite floating-point generator checks. The sufficient test $`\delta_\beta\lt \mu/2`$ has its crossing between $`3.41147195216`$ and $`3.41147195217`$ for this fixed Hamiltonian. That crossing is not the exact physical feasibility boundary.
 
 ## Keeping the Gibbs ground eigenvector gives stronger exact-target tests
 
@@ -121,7 +121,7 @@ e^{-\beta(E_1-E_0)}=\frac{p_1}{p_0}
 
 For the explicit witness, the certificate encloses $`r`$ between $`0.000072889471412`$ and $`0.000072889471413`$. The ratio test excludes inverse temperatures above $`\log(1/r)/(E_1-E_0)`$, whose certified interval is $`(3.170161438761,3.170161438762)`$. These are sharper applications of inherited fixed-eigenvector balance; their failure to exclude a temperature supplies no feasible generator.
 
-The companion's stronger [energy-resolved ground-population forms](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/5666fe5ede05e8d5ea4d8caf1f9641c2170341f8/science/finite-temperature-feasibility.md) use all excited weights. Four rigorously negative bond forms at $`\beta=12/5`$, with analytic monotone continuation, exclude every nonscalar on-site/adjacent-pair jump for every real $`\beta\ge12/5`$. That exact-target certificate is distinct from the robust trace-distance floor derived above; its full proof and program are retained in the companion repository.
+The companion's stronger [energy-resolved ground-population forms](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/a7936ff432dcb745ef025f058ea5686614d89326/science/finite-temperature-feasibility.md) use all excited weights. Four rigorously negative bond forms at $`\beta=12/5`$, with analytic monotone continuation, exclude every nonscalar on-site/adjacent-pair jump for every real $`\beta\ge12/5`$. That exact-target certificate is distinct from the robust trace-distance floor derived above; its full proof and program are retained in the companion repository.
 
 ## Local and global coherent control give different feasible regions
 
@@ -141,6 +141,6 @@ This Hermitian global $`K`$ satisfies $`-i[K,\rho_\beta]=-B`$. The companion's d
 
 The companion's generic local-$`K`$ theorem fixes $`\beta>0`$ before selecting generic nearest-neighbor Hamiltonians. It is not a common generic-Hamiltonian assertion at every temperature. Its continuous reservoir interval is not a continuous evaluation-rank certificate. At $`\beta=3/1000`$ and $`\beta=1/100`$, the two constructions give a direct separation between local and unrestricted coherent control.
 
-For global $`K`$, the intermediate interval $`1/100<\beta<12/5`$ remains unresolved. The endpoint $`12/5`$ is a sufficient exclusion certificate, not an exact crossover. No monotonicity or connectedness of the full feasible set follows from the monotonicity of the negative population witness.
+For global $`K`$, the intermediate interval $`1/100\lt \beta\lt 12/5`$ remains unresolved. The endpoint $`12/5`$ is a sufficient exclusion certificate, not an exact crossover. No monotonicity or connectedness of the full feasible set follows from the monotonicity of the negative population witness.
 
 These claims concern autonomous stabilization on the original finite system under strict effective jump support. They supply neither an efficient synthesis of the generally global $`K`$ nor a rate at a prescribed total-strength budget. Rescaling the entire finite generator preserves its stationary state and rescales its gap. Larger neighborhoods, quasi-local tails, retained auxiliaries and time-dependent protocols require different statements.
