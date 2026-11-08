@@ -18,6 +18,7 @@ The following routes use selected sections rather than the whole text.
 | How does a differential equation define a physical evolution? | §§2.1–2.3; §§4.2–4.3; §4.5 | Operator exponentials, quantum channels and composition lead to the [admissible generators](../science/model.md#admissible-generators). |
 | What are the Hamiltonian and dissipative terms? | §5.2, Theorem 5.1 and Eq. (46) | Specialize the generator to constant coefficients and impose support on its jump operators. |
 | When is a stationary state the final state from every initial condition? | §5.4, Definition 5.3 and Theorems 5.3–5.4 | Relate stationary solutions and relaxation to the [explicit attraction proof](../science/construction.md#global-attraction). |
+| How does a pure-target accuracy floor constrain a Gibbs state? | §§5.2 and 5.4; §§6.2.1 and 6.2.8 | Stationarity, an energy eigenbasis and thermal populations support the [Gibbs bridge](#from-pure-target-fidelity-to-gibbs-accuracy). |
 | Does a local bath coupling yield a local effective jump? | §6.2.1, then §6.4.1 | Compare microscopic couplings with the [effective-support assumption](../science/resources.md#microscopic-bath-couplings-and-effective-jumps). |
 
 The marginal-spectrum bound, the ordinary-fidelity geometry and the explicit construction below are supplied by the project. The source establishes the open-system language; the [research dependencies](#textbook-background-and-research-dependencies) identify the separate scientific ingredients.
@@ -203,6 +204,23 @@ F_\psi(P)=|\langle\psi|00\rangle|^2=\frac34,
 ```
 
 Operationally, $`F_\psi(P)`$ is the success probability of the projector measurement onto the desired target. The theorem permits an optimized mixed output to improve this value, but requires $`F_\psi(\rho_*)\le7/8`$. This example does not determine the exact mixed optimum.
+
+## From pure-target fidelity to Gibbs accuracy
+
+The same source supports a thermal application without changing the educational anchor. RH §5.2 gives the GKLS equation, and §5.4 separates a stationary solution from a relaxing semigroup. RH §§6.2.1 and 6.2.8 provide the energy-basis and thermal-population language. These background sections do not contain this project's marginal-spectrum theorem or the companion's finite certificate.
+
+Let $`H_0`$ denote a target energy Hamiltonian with unique ground vector $`|g\rangle`$, while $`K`$ denotes the independently controlled coherent term. The Gibbs state has ground probability $`1-\delta_\beta`$. This repository's existing theorem bounds the stationary ground infidelity below by $`\mu(g)/2`$ for any supported representation with a nonscalar jump. A ground-projector measurement turns the probability difference directly into
+
+```math
+D_{\mathrm{tr}}(\sigma,\rho_\beta)
+\ge[\mu(g)/2-\delta_\beta]_+.
+```
+
+The [self-contained corollary](../science/gibbs-corollary.md) derives that step and supplies the exact conventions. It is a trace-distance statement about a mixed thermal target obtained from the inherited pure-target theorem. The [companion certificate](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/tree/7261788af6b88ba30222dc5e5fafb93337d09876/verification/ground-thermal) rigorously supplies the ground marginal weights and thermal deficit for an interacting five-qubit example; those numerical inputs and its stronger ground-population forms are project-specific material beyond RH.
+
+At exact Gibbs stationarity, $`|g\rangle`$ is already a stationary density-matrix eigenvector. Its diagonal commutator vanishes for any $`K`$, so population balance gives stronger exact-target tests without an estimate of coherent strength. Conversely, a positive local dissipator with zero energy-population drift can have its off-diagonal drift cancelled by a generally global $`K`$ when the Gibbs spectrum is simple. This is the established [spectral stabilizability construction](../references/RELATED_WORK.md#linowski2023). The companion's positive reservoir and coercivity make that completion attractive at high temperature; its local-$`K`$ theorem excludes that resource choice.
+
+The example therefore connects one inherited fidelity law to a robust cold approximation floor and a separately certified high/cold exact-feasibility comparison. It does not infer an exact transition or efficient implementation. The [resource account](../science/resources.md#local-and-global-coherent-control-for-gibbs-targets) retains the distinction between stationary accuracy, physical coherent support and the cost of implementing $`K`$.
 
 ## Textbook background and research dependencies
 

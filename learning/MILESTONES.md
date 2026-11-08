@@ -187,20 +187,20 @@ This phase begins with one local spectral quantity. It first builds a converse f
 
 - **Phase:** Narrative/innovation.
 - **Central question:** Why can a converse allow an arbitrary global Hamiltonian without estimating its strength?
-- **Understanding target:** Explain why a Hamiltonian commutator has zero diagonal expectation in a stationary density-matrix eigenvector. Use centered jumps to interpret the remaining equality as dissipative loss from the leading component balanced by influx from the remainder.
+- **Understanding target:** Explain why a Hamiltonian commutator has zero diagonal expectation in a stationary density-matrix eigenvector. Use centered jumps to interpret the remaining equality as dissipative loss from the leading component balanced by influx from the remainder. Specialize the same balance to a prescribed Gibbs ground eigenvector and explain why no assumption on the coherent Hamiltonian's support or strength enters its diagonal equation.
 - **Dependencies and story role:** [M07](#m07), [M15](#m15). This isolates the inherited balance mechanism on which the mixed converse rests.
 - **Conceptual connection:** The stationary equation permits cancellation among different channels, yet its diagonal balance compares nonnegative transition contributions and eliminates coherent strength from the bound.
-- **Sources:** Anchor context: [RH §3, Eq. (19)][rh-3] and [§5.2][rh-5-2]. Project derivation: [stationary population balance, Eq. (1)](../science/converse.md#stationary-population-balance); attribution: [Linowski et al.](../references/RELATED_WORK.md#linowski2023).
+- **Sources:** Anchor context: [RH §3, Eq. (19)][rh-3] and [§5.2][rh-5-2]. Project derivation: [stationary population balance, Eq. (1)](../science/converse.md#stationary-population-balance); attribution: [Linowski et al.](../references/RELATED_WORK.md#linowski2023). Thermal specialization: [fixed Gibbs eigenvector](../science/gibbs-corollary.md#keeping-the-gibbs-ground-eigenvector-gives-stronger-exact-target-tests).
 
 <a id="m17"></a>
 ### M17 — Stationarity forces a small local eigenvalue
 
 - **Phase:** Narrative/innovation.
 - **Central question:** How does locality convert population balance into a constraint on the dominant eigenvector's marginals?
-- **Understanding target:** Relate a supported jump's loss and influx norms to the minimum and maximum eigenvalues of the corresponding marginal. Explain why summing the resulting inequalities forces at least one active support to satisfy $`\lambda_{\min}(\phi_S)\le\delta`$.
+- **Understanding target:** Relate a supported jump's loss and influx norms to the minimum and maximum eigenvalues of the corresponding marginal. Explain why summing the resulting inequalities forces at least one active support to satisfy $`\lambda_{\min}(\phi_S)\le\delta`$. Distinguish that moving eigenvector from the known Gibbs ground vector; derive the exact-target conditions $`\delta_\beta\ge\mu(g)`$ and $`e^{-\beta(E_1-E_0)}\ge\min_S\lambda_{\min}(g_S)/\lambda_{\max}(g_S)`$.
 - **Dependencies and story role:** [M04](#m04), [M12](#m12), [M16](#m16). This is the local spectral step that turns general stationarity into a locality-sensitive obstruction.
 - **Conceptual connection:** The relevant marginal belongs to the actual leading stationary vector. Arbitrary channel counts and strengths cannot invalidate a contradiction obtained by summing nonnegative local terms.
-- **Sources:** Anchor context: [RH §2.1][rh-2-1] and the operator inner product in [§5.2][rh-5-2]. Project proof: [small eigenvalue in an active marginal, Eqs. (2)–(3)](../science/converse.md#a-small-eigenvalue-in-an-active-local-marginal).
+- **Sources:** Anchor context: [RH §2.1][rh-2-1] and the operator inner product in [§5.2][rh-5-2]. Project proof: [small eigenvalue in an active marginal, Eqs. (2)–(3)](../science/converse.md#a-small-eigenvalue-in-an-active-local-marginal). The [Gibbs corollary](../science/gibbs-corollary.md#keeping-the-gibbs-ground-eigenvector-gives-stronger-exact-target-tests) gives these inherited fixed-eigenvector consequences and points to the companion's stronger energy-resolved witness.
 
 <a id="m18"></a>
 ### M18 — A binary local measurement controls global overlap
@@ -277,10 +277,10 @@ This phase begins with one local spectral quantity. It first builds a converse f
 
 - **Phase:** Narrative/innovation.
 - **Central question:** Why do the same allowed support sizes impose different constraints on Bell, GHZ and ring-graph targets?
-- **Understanding target:** Connect product-state kernels, Bell single-site spectra, GHZ pair kernels and the five-qubit ring's maximally mixed pair marginals to their respective values of $`\mu`$. Use the sharper one-qubit-bath Bell benchmark to interpret the universal interval's non-sharpness.
+- **Understanding target:** Connect product-state kernels, Bell single-site spectra, GHZ pair kernels and the five-qubit ring's maximally mixed pair marginals to their respective values of $`\mu`$. Use the sharper one-qubit-bath Bell benchmark to interpret the universal interval's non-sharpness. Compare the certified interacting five-qubit ground state, whose nine allowed marginals are full rank and satisfy $`0.000071696775227<\mu<0.000071696775228`$; explain how decreasing Gibbs thermal deficit approaches that pure target.
 - **Dependencies and story role:** [M03](#m03), [M24](#m24). This gives concrete physical meaning to the theorem before moving to general support-size laws.
 - **Conceptual connection:** Entanglement alone does not decide feasibility. The decisive distinction is the full spectrum on the specific allowed supports.
-- **Sources:** Anchor context: [RH §4.1][rh-4-1]. Project [structured examples](../science/examples.md), especially [GHZ](../science/examples.md#ghz-targets-a-local-kernel-changes-feasibility) and [the ring graph state](../science/examples.md#five-qubit-ring-graph-state-a-two-body-error-floor); benchmark attribution: [Žnidarič](../references/RELATED_WORK.md#znidaric2015).
+- **Sources:** Anchor context: [RH §4.1][rh-4-1]. Project [structured examples](../science/examples.md), especially [GHZ](../science/examples.md#ghz-targets-a-local-kernel-changes-feasibility) and [the ring graph state](../science/examples.md#five-qubit-ring-graph-state-a-two-body-error-floor); benchmark attribution: [Žnidarič](../references/RELATED_WORK.md#znidaric2015). Certified interacting example: [ground-state inputs](../science/gibbs-corollary.md#certified-five-qubit-example).
 
 <a id="m26"></a>
 ### M26 — Accuracy as a requirement on dissipative support
@@ -317,20 +317,20 @@ This phase begins with one local spectral quantity. It first builds a converse f
 
 - **Phase:** Narrative/innovation.
 - **Central question:** What does an attained stationary error establish about a realizable preparation process?
-- **Understanding target:** Separate bounded operator norms from the cost of describing and implementing a global Hamiltonian. Explain how time rescaling preserves stationary accuracy, and interpret finite algebra and spectrum checks as evidence about specified generators and their implementation, without inferring a general preparation-time law.
-- **Dependencies and story role:** [M08](#m08), [M10](#m10), [M21](#m21), [M23](#m23), [M28](#m28). This connects the theorem's global consequences back to its physical resources and evidence.
+- **Understanding target:** Separate bounded operator norms from the cost of describing and implementing a global Hamiltonian. Explain how time rescaling preserves stationary accuracy, and interpret finite algebra and spectrum checks as evidence about specified generators and their implementation, without inferring a general preparation-time law. Derive the Gibbs trace-distance floor from the ground-projector probability difference, read the $`\beta=4`$ certificate, and separate local/global coherent-control feasibility from the implementation cost and a rate after total-generator rescaling.
+- **Dependencies and story role:** [M08](#m08), [M10](#m10), [M19](#m19), [M21](#m21), [M23](#m23), [M25](#m25), [M28](#m28). This connects the theorem's global consequences back to its physical resources and evidence.
 - **Conceptual connection:** The same construction can establish an accuracy optimum while leaving its scalable implementation and dimension-dependent relaxation behavior unresolved.
-- **Sources:** [RH §2.1][rh-2-1], [§2.2][rh-2-2] and [§5.4, Theorem 5.4][rh-5-4]. Project [rates](../science/resources.md#rates-and-coherent-strength), [implementation cost](../science/resources.md#a-bounded-operator-norm-does-not-price-implementation) and [verification](../verification/README.md).
+- **Sources:** [RH §2.1][rh-2-1], [§2.2][rh-2-2] and [§5.4, Theorem 5.4][rh-5-4]. Project [rates](../science/resources.md#rates-and-coherent-strength), [implementation cost](../science/resources.md#a-bounded-operator-norm-does-not-price-implementation) and [verification](../verification/README.md). Thermal application: [Gibbs corollary](../science/gibbs-corollary.md); [coherent-control comparison](../science/resources.md#local-and-global-coherent-control-for-gibbs-targets).
 
 <a id="m30"></a>
 ### M30 — Narrative synthesis: one law, its mechanism and its domain
 
 - **Phase:** Narrative/innovation.
 - **Central question:** What complete scientific statement do the geometry, converse, construction and consequences jointly establish?
-- **Understanding target:** Connect the least allowed marginal eigenvalue to pure-output geometry, the factor-two mixed-output bound and an attained autonomous generator. Explain the uniform and typical-target consequences with their assumptions, identify the inherited ingredients, and retain the boundaries imposed by strict effective support, fixed state space and unrestricted coherent control.
+- **Understanding target:** Connect the least allowed marginal eigenvalue to pure-output geometry, the factor-two mixed-output bound and an attained autonomous generator. Explain the uniform and typical-target consequences with their assumptions, identify the inherited ingredients, and retain the boundaries imposed by strict effective support, fixed state space and unrestricted coherent control. Include the asymmetric Gibbs consequence: this inherited law supplies a robust thermal approximation floor, while the companion's certified construction and population witness supply a high/cold feasibility bracket with an unresolved middle interval.
 - **Dependencies and story role:** [M24](#m24), [M25](#m25), [M28](#m28), [M29](#m29), together with their dependencies. This is the final phase synthesis and completes the connected account.
 - **Conceptual connection:** The contribution is a target-dependent stationary-accuracy characterization. Its meaning includes both what local reservoir design cannot overcome and what one allowed reset can attain with a suitable global Hamiltonian.
-- **Sources:** Anchor synthesis: [RH §5.2][rh-5-2], [§5.4][rh-5-4] and [§6.2.1][rh-6-2-1]. Project [accuracy theorem](../science/model.md#accuracy-theorem), [consequences](../science/consequences.md), [resource boundaries](../science/resources.md) and [contribution boundary and attribution](../references/RELATED_WORK.md#contribution-boundary).
+- **Sources:** Anchor synthesis: [RH §5.2][rh-5-2], [§5.4][rh-5-4] and [§6.2.1][rh-6-2-1]. Project [accuracy theorem](../science/model.md#accuracy-theorem), [consequences](../science/consequences.md), [resource boundaries](../science/resources.md) and [contribution boundary and attribution](../references/RELATED_WORK.md#contribution-boundary). Thermal synthesis and ownership: [Gibbs application](../science/gibbs-corollary.md) and [sister comparison](../references/RELATED_WORK.md#gibbs-cancellation).
 
 [rh-2-1]: https://arxiv.org/pdf/1104.5242v2#page=4
 [rh-2-2]: https://arxiv.org/pdf/1104.5242v2#page=6
