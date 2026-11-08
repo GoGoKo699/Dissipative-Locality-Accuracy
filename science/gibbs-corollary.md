@@ -2,7 +2,7 @@
 
 [Model and theorem](model.md) · [Stationary converse](converse.md) · [Consequences](consequences.md) · [Coherent-control resources](resources.md#local-and-global-coherent-control-for-gibbs-targets)
 
-A low-temperature Gibbs state approaches a ground-state projector. The pure-target stationary bound therefore gives a finite-temperature approximation floor whenever every allowed ground-state marginal is full rank. This page derives that corollary and applies it to the rigorously certified five-qubit witness in [Gibbs Cancellation Obstruction](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction). The complete explicit certificate, stronger exact-target proof and positive thermal construction have their [authoritative home there](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/a7936ff432dcb745ef025f058ea5686614d89326/science/finite-temperature-feasibility.md).
+A low-temperature Gibbs state approaches a ground-state projector. The pure-target stationary bound therefore gives a finite-temperature approximation floor whenever every allowed ground-state marginal is full rank. This page derives that corollary and applies it to the rigorously certified five-qubit witness in [Gibbs Cancellation Obstruction](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction). The complete explicit certificate, stronger exact-target proof and positive thermal construction have their [authoritative home there](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/7261788af6b88ba30222dc5e5fafb93337d09876/science/finite-temperature-feasibility.md).
 
 ## Model and accuracy conventions
 
@@ -60,7 +60,7 @@ No square root or additional factor of two appears: the comparison uses one proj
 
 ## Certified five-qubit example
 
-Take the original five-qubit open chain and let $`\mathcal N`$ contain its five single sites and four adjacent pairs. The integer Pauli Hamiltonian $`H_0`$ is fixed by the [authoritative coefficient file](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/a7936ff432dcb745ef025f058ea5686614d89326/verification/data/hamiltonian.json). The [256-bit Arb/Acb certificate](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/a7936ff432dcb745ef025f058ea5686614d89326/verification/ground-thermal/ground_thermal_certificate.json) isolates all 32 energies, certifies the normalized ground vector, and encloses the complete spectra of all nine allowed marginals. Every one of those marginals is positive definite. It proves
+Take the original five-qubit open chain and let $`\mathcal N`$ contain its five single sites and four adjacent pairs. The integer Pauli Hamiltonian $`H_0`$ is fixed by the [authoritative coefficient file](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/7261788af6b88ba30222dc5e5fafb93337d09876/verification/data/hamiltonian.json). The [256-bit Arb/Acb certificate](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/7261788af6b88ba30222dc5e5fafb93337d09876/verification/ground-thermal/ground_thermal_certificate.json) isolates all 32 energies, certifies the normalized ground vector, and encloses the complete spectra of all nine allowed marginals. Every one of those marginals is positive definite. It proves
 
 ```math
 0.000071696775227\lt \mu\lt 0.000071696775228,
@@ -121,7 +121,7 @@ e^{-\beta(E_1-E_0)}=\frac{p_1}{p_0}
 
 For the explicit witness, the certificate encloses $`r`$ between $`0.000072889471412`$ and $`0.000072889471413`$. The ratio test excludes inverse temperatures above $`\log(1/r)/(E_1-E_0)`$, whose certified interval is $`(3.170161438761,3.170161438762)`$. These are sharper applications of inherited fixed-eigenvector balance; their failure to exclude a temperature supplies no feasible generator.
 
-The companion's stronger [energy-resolved ground-population forms](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/a7936ff432dcb745ef025f058ea5686614d89326/science/finite-temperature-feasibility.md) use all excited weights. Four rigorously negative bond forms at $`\beta=12/5`$, with analytic monotone continuation, exclude every nonscalar on-site/adjacent-pair jump for every real $`\beta\ge12/5`$. That exact-target certificate is distinct from the robust trace-distance floor derived above; its full proof and program are retained in the companion repository.
+The companion's stronger [energy-resolved ground-population forms](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/7261788af6b88ba30222dc5e5fafb93337d09876/science/finite-temperature-feasibility.md) use all excited weights. Four rigorously negative bond forms at $`\beta=12/5`$, with analytic monotone continuation, exclude every nonscalar on-site/adjacent-pair jump for every real $`\beta\ge12/5`$. That exact-target certificate is distinct from the robust trace-distance floor derived above; its full proof and program are retained in the companion repository.
 
 ## Local and global coherent control give different feasible regions
 
