@@ -96,6 +96,14 @@ whose local matrix has rank one and satisfies $`\|J\|_{\mathrm{op}}^2=\gamma`$. 
 
 Both $`h`$ and $`\gamma`$ may be fixed positive constants. The accuracy witness therefore does not require an operator norm growing with the system dimension. Global attraction holds for each finite constructed generator, but this norm statement provides no dimension-uniform convergence rate.
 
+## Local and global coherent control for Gibbs targets
+
+The [Gibbs application](gibbs-corollary.md) uses $`H_0`$ for the target energy Hamiltonian and $`K`$ for the controlled coherent term. The stationary converse remains valid if $`K`$ is further restricted to local terms. Its pure-output attaining construction uses unrestricted $`K`$, so it provides no corresponding local-$`K`$ upper bound.
+
+[Gibbs Cancellation Obstruction](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction/blob/5666fe5ede05e8d5ea4d8caf1f9641c2170341f8/science/finite-temperature-feasibility.md) distinguishes those models for the same explicit five-qubit Gibbs target. Its local-$`K`$ cancellation obstruction is compatible with exact high-temperature preparation obtained by cancelling an inherited secular reservoir's off-diagonal drift with generally global $`K`$. At sufficiently low temperature its certified negative ground-population forms exclude genuine dissipation even for global $`K`$. Strict jump support is retained throughout; changing coherent support alone changes the high-temperature feasibility conclusion.
+
+For each fixed temperature in the feasible interval, the completed global-$`K`$ generator is finite and can be rescaled to any positive full-generator norm budget. Such rescaling preserves exact stationarity and scales the positive gap. The unscaled dissipative coercivity is not an explicit rate at that budget without a bound on the complete generator norm. Neither a small norm nor formal exact coherent completion supplies an efficient specification or implementation of $`K`$.
+
 ## A bounded operator norm does not price implementation
 
 The path basis is built from the full target state and a local Schmidt decomposition. Its vectors generally extend across the entire physical system. Nearest-neighbor hopping in that abstract basis is not nearest-neighbor coupling between physical sites.

@@ -36,6 +36,17 @@ The [construction](construction.md) makes every such $`\phi`$ globally attractiv
 
 When $`\mu_{\mathcal N}(\psi)=0`$, the target itself can be stabilized exactly. When $`\mu_{\mathcal N}(\psi)>0`$, the converse gives a positive error floor even for mixed stationary states and arbitrarily strong coherent control. The exact rank obstruction is established background; its quantitative extension to ordinary stationary fidelity is described in [related work](../references/RELATED_WORK.md).
 
+## A thermal approximation floor from a pure ground target
+
+Let $`|g\rangle`$ be the unique ground vector of a target energy Hamiltonian $`H_0`$, set $`\mu=\mu_{\mathcal N}(g)`$, and let $`\delta_\beta=1-\langle g|\rho_\beta|g\rangle`$ for its Gibbs state. Every stationary $`\sigma`$ with a nonscalar allowed jump obeys the existing pure-target converse. Measuring the ground projector therefore gives
+
+```math
+D_{\mathrm{tr}}(\sigma,\rho_\beta)
+\ge[\mu/2-\delta_\beta]_+.
+```
+
+This is a direct consequence of the inherited stationary-fidelity theorem, with half trace distance to the mixed thermal target. The [Gibbs corollary](gibbs-corollary.md) derives it, gives an explicit rigorous five-qubit floor at $`\beta=4`$, and compares local and global coherent control. The companion's stronger exact-target population witness and high-temperature construction are separate results; the pure-output upper construction here does not itself prepare a specified mixed Gibbs state.
+
 ## A deterministic support requirement
 
 Consider $`n`$ physical qubits and supports satisfying $`1\le |S|\le k`$. Suppose that, for some $`0\lt c\le1`$,

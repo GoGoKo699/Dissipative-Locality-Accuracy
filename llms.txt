@@ -16,6 +16,9 @@ Canonical entrypoints:
 - science/examples.md: structured targets and the positive/zero-marginal boundary.
 - science/consequences.md: uniform marginals, finite-accuracy support requirements,
   Haar marginal concentration and its uniform support-family probability bound.
+- science/gibbs-corollary.md: inherited pure-target bound applied to Gibbs
+  trace-distance accuracy; fixed ground eigenvector tests; certified five-qubit
+  data and the companion-owned high/cold feasibility bracket with local/global K.
 - science/resources.md: what is optimized, global Hamiltonian implementation,
   convergence limits, actual jump support and changes of physical model.
 - references/RELATED_WORK.md: exact primary comparisons, inherited ingredients,
@@ -49,6 +52,11 @@ Preserve these distinctions:
   jump supported on an allowed region. General channel mixing changes displayed
   supports without necessarily changing admissibility.
 - The target need not be an eigenvector of the stationary density matrix.
+- The Gibbs application distinguishes target H0 from coherent K. Its mu/2
+  trace-distance floor is inherited here; the complete finite certificate and
+  energy-resolved proof belong to Gibbs-Cancellation-Obstruction at the pinned
+  source linked in science/gibbs-corollary.md. beta>=2.4 is a sufficient exact
+  exclusion endpoint, not an exact transition; .01<beta<2.4 remains unresolved.
 - The Hamiltonian is arbitrary and global. The converse survives stronger
   restrictions, while the matching upper construction uses global freedom.
 - The Jacobi basis must diagonalize the projector J-dagger J.

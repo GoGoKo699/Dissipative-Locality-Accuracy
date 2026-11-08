@@ -33,6 +33,10 @@ Allowing a mixed steady state can improve infidelity over the best pure steady s
 
 Exact local-rank obstructions, spectral population balance and Hamiltonian-assisted attraction are [established ingredients](references/RELATED_WORK.md). The contribution is the quantitative target-dependent characterization of ordinary stationary fidelity, including the comparison between pure and mixed outputs. The general lower bound is not claimed to give the exact optimal coefficient for every target.
 
+## Gibbs targets and coherent-control locality
+
+The sister project [Gibbs Cancellation Obstruction](https://github.com/GoGoKo699/Gibbs-Cancellation-Obstruction) applies this repository's inherited pure-target bound to a certified interacting five-qubit ground state. The [Gibbs corollary](science/gibbs-corollary.md) gives a stationary half-trace-distance floor above $`2.9781677008303\times10^{-5}`$ at $`\beta=4`$. The companion's explicit certificate also establishes exact attractive Gibbs preparation with global coherent control for $`0\le\beta\le0.01`$, and excludes genuine dissipative stationarity for every real $`\beta\ge2.4`$ even with that global control. The intermediate interval remains unresolved. Its separate local-Hamiltonian cancellation theorem retains its own support restrictions and temperature quantifiers.
+
 ## Read the science
 
 Begin with the [model, conventions and exact theorem](science/model.md), then follow the [stationary-state converse](science/converse.md) and the [attaining construction](science/construction.md). The examples and consequences connect the mathematical invariant to reservoir support and finite accuracy.
@@ -44,6 +48,7 @@ Begin with the [model, conventions and exact theorem](science/model.md), then fo
 | One reset, an explicit Hamiltonian, uniqueness and global attraction | [Construction](science/construction.md) |
 | Product, Bell, GHZ and graph-state boundaries | [Examples](science/examples.md) |
 | Uniform marginals, the Haar probability estimate and accuracy requirements | [Consequences](science/consequences.md) |
+| Gibbs approximation floor and local/global coherent-control comparison | [Gibbs corollary](science/gibbs-corollary.md) |
 | Hamiltonian control, effective jump locality and preparation resources | [Resource interpretation](science/resources.md) |
 | Closest results and inherited proof ingredients | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
 | Reproducible checks and the scope of numerical evidence | [Verification](verification/README.md) |
